@@ -7,11 +7,14 @@
 ![изображение](https://github.com/user-attachments/assets/76d96ec7-aac5-4211-8319-9e2eaa7dad62)
 
 ## Install
----
 
 ```bash
 git clone https://github.com/exviolet/config-neovim.git ~/.config/nvim
 ```
+
+> [!TIP]
+> And also to get all the information about the config go to the `full-nvim-conf` **branch**
+
 ---
 
 > [!NOTE]
