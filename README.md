@@ -4,7 +4,7 @@
 ---
 
 ```bash
-git clone
+git clone https://github.com/exviolet/config-neovim.git ~/.config/nvim
 ```
 ---
 
