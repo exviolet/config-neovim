@@ -12,6 +12,9 @@ vim.opt.undofile = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+--langmap
+vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+
 --Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
