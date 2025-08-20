@@ -49,12 +49,16 @@ dependencies = 'nvim-tree/nvim-web-devicons'},
   'hrsh7th/vim-vsnip',
   dependencies = { 'hrsh7th/nvim-cmp' },
 },
+{
+    'numToStr/Comment.nvim'
+},
 })
 
--- Theme 
+--Theme 
 -- require('onedark').load()
 
 --Colorizer
 require'colorizer'.setup()
 
-
+--Comment
+require('Comment').setup()
