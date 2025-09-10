@@ -52,6 +52,10 @@ dependencies = 'nvim-tree/nvim-web-devicons'},
 {
     'numToStr/Comment.nvim'
 },
+{
+  "windwp/nvim-ts-autotag",
+  dependencies = { "nvim-treesitter/nvim-treesitter" }, 
+},
 })
 
 --Theme 

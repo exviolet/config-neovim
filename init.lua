@@ -37,6 +37,7 @@ require('plugins.cmp')
 require('plugins.mason')
 require('plugins.gitsigns')
 require('plugins.colorscheme')
+require('plugins.nvim-ts-autotag')
 
 -- Themes
 -- vim.cmd("colorscheme kanagawa")
