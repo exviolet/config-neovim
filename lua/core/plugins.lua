@@ -56,6 +56,8 @@ dependencies = 'nvim-tree/nvim-web-devicons'},
   "windwp/nvim-ts-autotag",
   dependencies = { "nvim-treesitter/nvim-treesitter" }, 
 },
+
+require("plugins.formatting"),
 })
 
 --Theme 

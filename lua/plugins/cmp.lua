@@ -60,7 +60,12 @@ cmp.setup.cmdline(':', {
 })
 
 -- Set up lspconfig.
+-- cmp.lua (низ файла): новый стиль без require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require('lspconfig')['ts_ls'].setup {capabilities = capabilities}
-require('lspconfig')['angularls'].setup {capabilities = capabilities}
-require('lspconfig')['html'].setup {capabilities = capabilities}
+
+vim.lsp.config('ts_ls',     { capabilities = capabilities })
+vim.lsp.config('angularls', { capabilities = capabilities })
+vim.lsp.config('html',      { capabilities = capabilities })
+
+-- включаем сервера (можно строкой или списком)
+vim.lsp.enable({ 'ts_ls', 'angularls', 'html' })
