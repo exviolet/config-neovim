@@ -26,7 +26,6 @@ require("core.comments")
 require("core.keymaps")
 
 -- Plugins
-require("plugins.treesitter")
 require("plugins.telescope")
 require("plugins.buffline")
 require("plugins.lualine")

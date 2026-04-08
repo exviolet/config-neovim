@@ -1,9 +1,1 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "typescript", "tsx", "html", "css", "javascript","lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-
-  sync_install = false,
-  auto_install = true,
-  highlight = {
-    enable = true,
-    },
-}
+-- Treesitter configuration is handled in core/plugins.lua

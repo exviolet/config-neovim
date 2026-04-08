@@ -15,7 +15,32 @@ require("lazy").setup({
 			"s1n7ax/nvim-window-picker",
 		},
 	},
-	{ "nvim-treesitter/nvim-treesitter" },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		build = ":TSUpdate",
+		config = function(plugin)
+			vim.opt.rtp:prepend(plugin.dir .. "/runtime")
+			require("nvim-treesitter").setup({
+				ensure_installed = {
+					"typescript", "tsx", "javascript", "html", "css", "scss",
+					"json", "jsonc", "yaml", "toml",
+					"lua", "python", "bash",
+					"markdown", "markdown_inline",
+					"vim", "vimdoc", "query", "regex",
+					"gitcommit", "gitignore", "diff",
+					"dockerfile", "sql",
+				},
+				auto_install = true,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "*",
+				callback = function()
+					pcall(vim.treesitter.start)
+				end,
+			})
+		end,
+	},
 
 	{
 		"nvim-telescope/telescope.nvim",
@@ -77,9 +102,6 @@ require("lazy").setup({
 		opts = {
 			-- default is false, also needed for blink.cmp integration!
 			enable_cmp_integration = true,
-			-- optional if your plugin installation directory
-			-- is not vim.fn.stdpath("data") .. "/lazy/
-			plugin_path = vim.fn.expand("$HOME/plugins/"),
 		},
 		config = function(_, opts)
 			require("emoji").setup(opts)
